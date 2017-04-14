@@ -16,7 +16,7 @@ import android.widget.RelativeLayout;
 public class OverlapLayout extends RelativeLayout {
 
     private static final String TAG = "OverlapLayout";
-    private final int left = 30;
+    private final int left = 60;
 
     private View addedView = null;
     private int index = -1;
@@ -112,10 +112,10 @@ public class OverlapLayout extends RelativeLayout {
 
     //放大view
     private void animChild(View child) {
-        ViewCompat.animate(child).scaleX(1.2f).scaleY(1.2f).translationY(-20).setDuration(500).start();
+        ViewCompat.animate(child).scaleX(1.2f).scaleY(1.2f).translationY(-20).setDuration(300).start();
     }
     //将放大的view还原
     private void resetChild(View child) {
-        ViewCompat.animate(child).scaleX(1f).scaleY(1f).translationY(0).setDuration(500).start();
+        ViewCompat.animate(child).scaleX(1f).scaleY(1f).translationY(0).setDuration(300).start();
     }
 }

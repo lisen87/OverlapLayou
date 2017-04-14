@@ -1,58 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<view.OverlapLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/overlab"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="?attr/colorPrimary"
     android:gravity="center">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="第一个卡片"
-        android:textSize="16sp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <view.OverlapLayout
+        android:id="@+id/overlab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#f99999"/>
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="第2个卡片"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:background="#393039"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="#ffffff"
+        >
         <TextView
-            android:id="@+id/tvup"
             android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="子布局中的1号卡片"
+            android:layout_height="100dp"
+            android:text="第一个卡片"
             android:textSize="16sp"
             android:gravity="center"
-            android:background="#00ce99"/>
+            android:background="#f99999"/>
         <TextView
-            android:id="@+id/tvdown"
             android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="子布局中的2号卡片"
+            android:layout_height="100dp"
+            android:text="第2个卡片"
             android:textSize="16sp"
             android:gravity="center"
-            android:background="#009999"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="第3个卡片"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:background="#f99900"/>
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="第4个卡片"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:background="#119900"/>
+            android:background="#393039"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvup"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="子布局中的1号卡片"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="#00ce99"/>
+            <TextView
+                android:id="@+id/tvdown"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="子布局中的2号卡片"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="#009999"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="第3个卡片"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="#f99900"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="第4个卡片"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="#119900"/>
 
-</view.OverlapLayout>
+    </view.OverlapLayout>
+
+
+</LinearLayout>
